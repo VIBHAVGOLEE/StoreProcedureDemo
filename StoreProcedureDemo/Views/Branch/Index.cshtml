@@ -1,0 +1,27 @@
+﻿@model IEnumerable<StoreProcedureDemo.Models.sp_select_branch_Result>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <table>
+            <tr><td>BranchId</td><td>BranchName</td></tr>
+            @foreach(var item in Model){
+                <tr>
+                    <td>@Html.DisplayFor(a => item.Id)</td>
+                    <td>@Html.DisplayFor(a => item.BranchName)</td>
+                    <td>@Html.ActionLink("Edit", "Edit", new { Id = item.Id}) || @Html.ActionLink("Delete","Delete", new { Id = item.Id})</td>
+                    </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿@model StoreProcedureDemo.Models.Branch
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+            {
+                <table>
+                    <tr>
+                        <td>
+                            Branch Id
+                        </td>
+                        <td>@Html.TextAreaFor(a => a.Id)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Branch Name
+                        </td>
+                        <td>@Html.TextAreaFor(a => a.BranchName)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Branch Name
+                        </td>
+                        <td><input type="submit" name="btnSubmit" value="Insert" /></td>
+                    </tr>
+                </table>
+            }
+    </div>
+</body>
+</html>
